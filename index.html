@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style/style.css">
+    <script src="js/vue.js"></script>
+    <script defer src="js/main.js"></script>
+  </head>
+  <body>
+    <div id="app-my">
+      <div style="text-align: center;">
+        <div v-if="seen">
+          <div style="margin-top: 340px;">
+            <p id="text" v-show="your_score">{{ pl }} ваш счет: {{ score }} поздравляем!</p>
+            <p v-show="warring" id="text1">Вы не ввели никейм!</p>
+            <input id="text1" v-model="pl" placeholder="Player" />
+            <br><br>
+            <button id="text1" @click="newGame">START</button>
+          </div>
+        </div>
+        <div v-else>
+          <p id="text">Удачной игры {{ pl }}!</p>
+          <div id="text">Score: {{ score }}</div>
+          <div id="text" style="text-align: center;"><p>{{ currentTime }}</p></div>
+          <div id="bf2" v-show="seen_bf2" @click="score_bf2"></div>
+          <div id="bf1" v-show="seen_bf1" @click="score_bf1"></div>
+
+          <div id="mf1" v-show="seen_mf1" @click="score_mf1"></div>
+          <div id="mf2" v-show="seen_mf2" @click="score_mf2"></div>
+          <div id="mf3" v-show="seen_mf3" @click="score_mf3"></div>
+          <div id="mf4" v-show="seen_mf4" @click="score_mf4"></div>
+          <div id="mf5" v-show="seen_mf5" @click="score_mf5"></div>
+          <div id="mf6" v-show="seen_mf6" @click="score_mf6"></div>
+
+          <div id="sf1" v-show="seen_sf1" @click="score_sf1"></div>
+          <div id="sf2" v-show="seen_sf2" @click="score_sf2"></div>
+          <div id="sf3" v-show="seen_sf3" @click="score_sf3"></div>
+          <div id="sf4" v-show="seen_sf4" @click="score_sf4"></div>
+          <div id="sf5" v-show="seen_sf5" @click="score_sf5"></div>
+          <div id="sf6" v-show="seen_sf6" @click="score_sf6"></div>
+          <div id="sf7" v-show="seen_sf7" @click="score_sf7"></div>
+          <div id="sf8" v-show="seen_sf8" @click="score_sf8"></div>
+          <div id="sf9" v-show="seen_sf9" @click="score_sf9"></div>
+          <div id="sf10" v-show="seen_sf10" @click="score_sf10"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
